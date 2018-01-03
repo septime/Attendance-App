@@ -34,7 +34,6 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
     protected String doInBackground(String... params) {
         String type = params[0];
         String username = params[1];
-        String password = params[2];
         String login_url = "http://attendance-proj.000webhostapp.com/php/appLogin.php";
         if (type.equals("login")){
             try {
@@ -45,8 +44,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 conn.setDoInput(true);
                 OutputStream outputStream = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
-                String postData = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(username,"UTF-8")+"&"
-                        +URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(password,"UTF-8");
+                String postData = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(username,"UTF-8");
                 writer.write(postData);
                 writer.flush();
                 writer.close();
