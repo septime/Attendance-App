@@ -35,9 +35,26 @@
         tools:layout_editor_absoluteY="226dp"
         android:onClick="OnLogin"/>
         -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_in_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:text="Click to sign in" />
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
 
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
