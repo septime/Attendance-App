@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void updateUI(GoogleSignInAccount acc) {
         if (acc != null) { //if the user is already signed in
-            //this.startActivity(new Intent(this, AfterLogin.class)); //go to another activity
+            this.startActivity(new Intent(this, AfterLogin.class)); //go to another activity
         }
         else { //user has not signed in - display Google sign in button
             signInButton.setVisibility(View.VISIBLE);

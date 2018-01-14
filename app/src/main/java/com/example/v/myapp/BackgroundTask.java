@@ -84,7 +84,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
 
         alertDialog.setMessage(result);
 
-// go to another activity upon authorization
+/* go to another activity upon authorization
         if(result.contentEquals("Login successful")) {
 
             context.startActivity(new Intent(context, AfterLogin.class));
@@ -92,7 +92,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
         }else
         {
             Toast.makeText(context, "Wrong Username or Password!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
     }
 
